@@ -1,108 +1,216 @@
 # Telco Customer Churn Prediction
 
-## Overview
-This project presents an end-to-end machine learning solution to predict
-customer churn in a telecommunications context, with a strong focus on
-interpretability and business-oriented decision making.
+## 📌 Project Overview (English)
 
-The goal is to identify customers with a higher risk of cancellation,
-enabling proactive retention strategies.
+Customer churn is one of the most critical problems in subscription-based businesses.  
+This project focuses on predicting customer churn using Machine Learning techniques, with a strong emphasis on **interpretability**, **statistical rigor**, and **real-world applicability**.
 
-## Business Problem
-Customer churn has a direct impact on revenue and long-term growth.
-In competitive subscription-based markets, retaining existing customers
-is often more cost-effective than acquiring new ones.
+The goal is not only to build predictive models but also to **understand the drivers of churn**, explain model decisions, and extract actionable insights for business decision-making.
 
-This project addresses the challenge of identifying churn risk in advance,
-allowing the business to act before customers leave.
-
-## Approach
-A structured machine learning pipeline was built using Logistic Regression,
-selected for its transparency and interpretability.
-
-The solution includes:
-- Proper train-test separation and preprocessing pipelines
-- Recall-oriented evaluation aligned with business risk
-- Probability calibration for reliable risk estimation
-- Model explainability using coefficients and SHAP values
-
-## Key Metric
-Recall for the churn class was prioritized, as failing to identify a
-customer at risk represents a higher business cost than a false positive.
-
-## Key Insights
-- Contract type and customer tenure are among the strongest drivers of churn
-- Month-to-month contracts show significantly higher churn risk
-- Longer customer tenure strongly contributes to retention
-- Payment methods and internet service type also influence churn behavior
-
-## Business Recommendations
-Based on the model insights, the following actions are recommended:
-- Prioritize retention campaigns for customers on month-to-month contracts
-- Offer incentives for long-term contract migration
-- Target early-tenure customers with onboarding and support initiatives
-- Use calibrated churn probabilities to segment customers by risk level
-
-## Project Structure
-- `data_science/notebooks/02_final_churn_model.ipynb`  
-  Final, presentation-ready notebook with full analysis and explanations
-
-## Notes
-This project emphasizes decision-making, interpretability, and clarity
-over model complexity or raw predictive performance.
+This repository contains:
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- Model training and evaluation
+- Interpretation using coefficients and SHAP values
+- A final production-ready notebook
 
 ---
 
-# Previsão de Churn de Clientes (Português)
+## 📌 Visão Geral do Projeto (Português)
 
-## Visão Geral
-Este projeto apresenta uma solução completa de machine learning para
-prever o churn (cancelamento) de clientes em um contexto de telecomunicações,
-com forte foco em interpretabilidade e tomada de decisão orientada ao negócio.
+A evasão de clientes (churn) é um dos principais desafios de negócios baseados em assinatura.  
+Este projeto tem como objetivo prever o churn de clientes utilizando técnicas de Machine Learning, com forte foco em **interpretabilidade**, **fundamentação estatística** e **aplicação prática no mundo real**.
 
-O objetivo é identificar clientes com maior risco de cancelamento,
-permitindo ações proativas de retenção.
+Mais do que apenas prever, o projeto busca **entender os fatores que levam ao cancelamento**, explicar as decisões do modelo e gerar **insights acionáveis para o negócio**.
 
-## Problema de Negócio
-O churn de clientes impacta diretamente a receita e o crescimento
-de longo prazo. Em mercados competitivos e baseados em assinatura,
-reter clientes existentes costuma ser mais barato do que adquirir novos.
+Este repositório contém:
+- Análise exploratória dos dados
+- Engenharia de atributos
+- Treinamento e avaliação de modelos
+- Interpretação via coeficientes e SHAP
+- Um notebook final pronto para portfólio
 
-Este projeto aborda o desafio de identificar o risco de churn de forma
-antecipada, permitindo que a empresa atue antes da perda do cliente.
+---
 
-## Abordagem
-Foi construído um pipeline estruturado de machine learning utilizando
-Regressão Logística, escolhida por sua transparência e interpretabilidade.
+## 🎯 Business Problem | Problema de Negócio
 
-A solução inclui:
-- Separação adequada entre treino e teste
-- Pipeline de pré-processamento para evitar vazamento de dados
-- Avaliação orientada ao recall, alinhada ao risco de negócio
-- Calibração de probabilidades para estimativas confiáveis
-- Explicabilidade do modelo por meio de coeficientes e SHAP
+### English
+Customer churn directly impacts revenue, growth, and long-term sustainability.  
+Being able to **anticipate churn** allows companies to act proactively, offering retention strategies before customers leave.
 
-## Métrica Principal
-O recall da classe churn foi priorizado, pois não identificar um cliente
-em risco representa um custo maior para o negócio do que um falso positivo.
+### Português
+O churn impacta diretamente receita, crescimento e sustentabilidade do negócio.  
+Antecipar o cancelamento permite ações preventivas, como campanhas de retenção e melhorias de serviço.
 
-## Principais Insights
-- Tipo de contrato e tempo de permanência são os principais fatores de churn
-- Contratos mensais apresentam risco significativamente maior
-- Clientes com maior tempo de casa tendem a permanecer
-- Método de pagamento e tipo de serviço de internet influenciam o churn
+---
 
-## Recomendações de Negócio
-Com base nos insights do modelo, recomenda-se:
-- Priorizar campanhas de retenção para clientes com contrato mensal
-- Incentivar migração para contratos de longo prazo
-- Atuar nos primeiros meses do cliente com suporte e onboarding
-- Utilizar probabilidades calibradas para segmentar clientes por nível de risco
+## 📂 Repository Structure | Estrutura do Repositório
 
-## Estrutura do Projeto
-- `data_science/notebooks/02_final_churn_model.ipynb`  
-  Notebook final, pronto para apresentação, contendo toda a análise
+Telco-Customer-Churn/
+│
+├── data/
+│   └── raw/                 # Original dataset
+│
+├── notebooks/
+│   ├── 01_lab_exploration.ipynb
+│   └── 02_final_churn_model.ipynb
+│
+├── requirements.txt
+├── README.md
 
-## Observações
-Este projeto prioriza clareza, interpretabilidade e tomada de decisão
-em detrimento de complexidade excessiva ou otimização extrema de métricas.
+---
+
+## 📘 Notebooks Description | Descrição dos Notebooks
+
+### 🔍 01_lab_exploration.ipynb
+**Exploratory Data Analysis & Feature Understanding**
+
+- Data loading and cleaning
+- Handling missing values
+- Distribution analysis
+- Correlation analysis
+- Initial business insights
+
+### 🧠 02_final_churn_model.ipynb
+**Final Model & Interpretation**
+
+- Feature selection
+- Train/test split
+- Model training:
+  - Logistic Regression (primary and baseline model)
+  - Random Forest (comparative model for non-linear effects)
+- Evaluation metrics:
+  - Accuracy
+  - Precision
+  - Recall
+  - Confusion Matrix
+- Model interpretation:
+  - Coefficients (Logistic Regression)
+  - SHAP values (global and local explanations)
+
+---
+
+## 🧪 Models Used | Modelos Utilizados
+
+### Logistic Regression
+- Baseline and main model
+- High interpretability
+- Coefficients analyzed to understand feature impact
+
+### Random Forest
+- Used as a comparative model
+- Captures non-linear relationships
+- Higher predictive power in some scenarios
+- Feature importance and SHAP explanations
+
+---
+
+## 🧪 Validation Strategy | Estratégia de Validação
+
+### English
+The dataset was split into training and testing sets to evaluate generalization performance.  
+Care was taken to avoid data leakage, ensuring that all preprocessing and feature engineering steps were applied consistently across splits.
+
+### Português
+O conjunto de dados foi dividido em treino e teste para avaliar a capacidade de generalização do modelo.  
+Foram adotados cuidados para evitar vazamento de dados, garantindo que as etapas de pré-processamento e engenharia de atributos fossem aplicadas de forma consistente.
+
+---
+
+## 📊 Model Interpretability | Interpretabilidade
+
+### Coefficients
+Used to understand how each feature affects the probability of churn in linear models.
+
+### SHAP (SHapley Additive exPlanations)
+- Global feature importance
+- Local explanations for individual predictions
+- Clear visualization of model behavior
+
+This combination ensures **trustworthy and explainable AI**.
+
+---
+
+## 🧠 Key Insights | Principais Insights
+
+- Contract type strongly influences churn
+- Monthly charges have a significant impact
+- Tenure is one of the most protective factors against churn
+- Some features show non-linear effects, captured better by tree-based models
+
+---
+
+## 🎥 Project Presentation | Apresentação do Projeto
+
+- 📺 **YouTube Video (PT-BR)**  
+  https://www.youtube.com/watch?v=cbw1K6l7Bxg  
+
+- 📝 **LinkedIn Article**  
+  https://www.linkedin.com/posts/jessepmelo_apresento-aqui-um-projeto-completo-de-machine-activity-7424052162999058433-Phip
+
+The video presentation is in Portuguese.  
+YouTube automatically provides AI-based audio translation for English viewers.
+
+---
+
+## ⚙️ Installation & Setup | Instalação e Execução
+
+### Clone the repository
+git clone https://github.com/JessePMelo/Telco-Customer-Churn.git  
+cd Telco-Customer-Churn
+
+### Create and activate a virtual environment
+python -m venv venv  
+source venv/bin/activate   # Linux/Mac  
+venv\Scripts\activate      # Windows
+
+### Install dependencies
+pip install -r requirements.txt
+
+---
+
+## ☁️ Running on Google Colab | Rodando no Google Colab
+
+1. Open Google Colab
+2. Upload the notebooks
+3. Install dependencies:
+!pip install pandas numpy scikit-learn matplotlib shap statsmodels
+
+---
+
+## 📦 Requirements | Dependências
+
+pandas  
+numpy  
+scikit-learn  
+matplotlib  
+shap  
+statsmodels  
+
+---
+
+## 🚀 Why This Project Matters | Por Que Este Projeto Importa
+
+- Real-world business problem
+- Strong focus on explainability
+- Combines statistics and machine learning
+- Portfolio-ready and recruiter-friendly
+- Clear communication of results
+
+This project demonstrates the complete lifecycle of a data science solution, from problem formulation to interpretable results and business insights.
+
+---
+
+## 👤 Author | Autor
+
+**Jessé Pereira de Melo**  
+Data Science | Machine Learning | Business Intelligence  
+
+GitHub: https://github.com/JessePMelo  
+LinkedIn: https://www.linkedin.com/in/jessepmelo/
+
+---
+
+## 📜 License | Licença
+
+This project is intended for educational and portfolio purposes.
