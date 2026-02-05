@@ -47,16 +47,15 @@ Antecipar o cancelamento permite ações preventivas, como campanhas de retenç�
 ## 📂 Repository Structure | Estrutura do Repositório
 
 Telco-Customer-Churn/
-│
-├── data/
-│   └── raw/                 # Original dataset
-│
-├── notebooks/
-│   ├── 01_lab_exploration.ipynb
-│   └── 02_final_churn_model.ipynb
-│
+├── data_science/
+│ ├── data/
+│ │ └── raw/
+│ │ └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+│ └── notebooks/
+│ ├── 01_lab_exploration.ipynb
+│ └── 02_final_churn_model.ipynb
 ├── requirements.txt
-├── README.md
+└── README.md
 
 ---
 
