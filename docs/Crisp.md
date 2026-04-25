@@ -1,29 +1,29 @@
 CRISP-DM Framework
 
 1. Business Understanding
-Problema de negócio: Empresa do setor de telecomunicações com alta taxa de cancelamento de contratos (churn).
+Business problem: A telecommunications company with a high contract cancellation rate (churn).
 
-Objetivo: Identificar os principais fatores que influenciam o cancelamento de clientes e prever a probabilidade de churn.
+Objective: Identify the main factors that influence customer churn and predict the probability of cancellation.
 
-KPI principal: Taxa de churn (%)
+Main KPI: Churn rate (%)
 
-Critério de sucesso:
-- Classificar clientes em categorias de risco (alto, médio, baixo)
-- Identificar clientes de alto valor com alta probabilidade de cancelamento
-- Extrair insights sobre as variáveis mais relevantes para o churn
+Success criteria:
+- Classify customers into risk categories (high, medium, low)
+- Identify high-value customers with a high probability of churn
+- Extract insights about the most relevant variables influencing churn
 
 
 2. Data Understanding
-Fontes de dados: Dataset público fornecido pela IBM
+Data sources: Public dataset provided by IBM
 
-Variável target: Churn
+Target variable: Churn
 
-Período dos dados: Não especificado
+Data period: Not specified
 
-Limitações:
-- Ausência de geolocalização
-- Dataset não temporal (não permite análise de evolução no tempo)
-- Possível natureza sintética dos dados
+Limitations:
+- Lack of geolocation data
+- Non-temporal dataset (does not allow time-based analysis)
+- Possible synthetic nature of the data
 
 
 3. Data Preparation
@@ -32,21 +32,21 @@ problem definition → data understanding → data cleaning → feature engineer
 
 
 4. Modeling
-Baseline: Regressão Logística
+Baseline: Logistic Regression
 
-Modelos candidatos:
+Candidate models:
 - Random Forest
 - XGBoost
 
 
 5. Evaluation
-Métricas:
+Metrics:
 - Precision: 0.52
 - Recall: 0.80
 - F1-score: 0.63
 
 
 6. Conclusion
-O modelo apresentou bom desempenho na identificação de clientes com risco de churn, com destaque para o recall elevado.
+The model showed good performance in identifying customers at risk of churn, with a strong emphasis on recall.
 
-Isso indica que o modelo é eficiente em capturar clientes que realmente cancelam, sendo útil para estratégias de retenção, ainda que com trade-off em precisão.
+This indicates that the model is effective at capturing customers who are likely to churn, making it useful for retention strategies, despite the trade-off in precision.
